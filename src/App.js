@@ -13,7 +13,6 @@ export default memo(function App() {
     <HashRouter>
       <SHAppHeader/>
       {renderRoutes(routes)}
-      {console.log(routes)}
       <SHAppFooter/>
     </HashRouter>
   )
