@@ -7,7 +7,10 @@ export default memo(function SHRecommend() {
 
   const recommend = useSelector(state=>{
     return {
-      topBanners:state.topBanners
+      // topBanners:state.recommend.topBanners
+      // topBanners:state.recommend.get("topBanners")
+      // topBanners:state.get("recommend").get("topBanners")
+      topBanners:state.getIn(["recommend","topBanners"])
     }
   },shallowEqual)
 
@@ -18,6 +21,7 @@ export default memo(function SHRecommend() {
   return (
     <div>
       recommend
+      {console.log(recommend.topBanners.length)}
     </div>
   )
 })
